@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         'babel-polyfill',
-        './client.js'
+        './src/js/client.js'
     ],
     output: {
         filename: 'public/js/bundle.js'
