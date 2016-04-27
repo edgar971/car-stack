@@ -5,7 +5,13 @@ var express = require('express'),
     
     
     
-entriesRouter.route('/entries').get(function handler(req, res, next) {
+entriesRouter.route('/entries')
+.post(function handler(req, res){
+  var entry = new Entry(req.body);
+  entry.save();
+  res.status(201).send(entry);
+})
+.get(function handler(req, res, next) {
   var query = req.query;
   Entry.find(query, (err, entries) => {
     if (err) {
