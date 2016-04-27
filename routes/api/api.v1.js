@@ -21,4 +21,15 @@ router.get('/entries', function handler(req, res, next) {
   });
 });
 
+//get entry by id
+router.get('/entries/:entryID', function handler(req, res, next) {
+  Entry.findById(req.params.entryID, (err, entry) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.json(entry);
+    }
+  });
+});
+
 module.exports = router;
