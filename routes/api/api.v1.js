@@ -1,8 +1,8 @@
 var express = require('express'),
-    router = express.Router(),
-    db = require('../../db/connection'),
-    Entry = require('../../db/models/EntryModel');
-    
+  router = express.Router(),
+  db = require('../../db/connection'),
+  Entry = require('../../db/models/EntryModel');
+
 
 /* GET home page. */
 router.get('/', function handler(req, res, next) {
@@ -10,14 +10,15 @@ router.get('/', function handler(req, res, next) {
 });
 
 // Return all entries
-router.get('/entries', function handler(req, res, next){
-    Entry.find((err, entries) => {
-      if(err) {
-        res.status(500).send(err);
-      } else {
-        res.json(entries);
-      }
-    });
+router.get('/entries', function handler(req, res, next) {
+  var query = req.query;
+  Entry.find(query, (err, entries) => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      res.json(entries);
+    }
+  });
 });
 
 module.exports = router;
