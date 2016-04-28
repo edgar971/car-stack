@@ -10,6 +10,7 @@ CarEntryModel = new Schema({
     description: {
         type: String
     },
+    images: [{ url: String}],
     user: [{ name: String, email: String }],
     date: { type: Date, default: Date.now }
 });
