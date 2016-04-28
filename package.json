@@ -1,6 +1,16 @@
 {
   "name": "car-stack",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com/edgar971/car-stack.git"
+  },
+  "author": {
+    "name" : "Edgar Pino",
+    "email" : "edgarbeltran@me.com",
+    "url" : "http://edgardev.com/"
+  },
   "private": true,
   "scripts": {
     "prestart": "webpack",
