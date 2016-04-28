@@ -6,7 +6,16 @@ var mongoose = require('mongoose'),
 CarEntryModel = new Schema({
     title: {
         type: String
-    }, 
+    },
+    year: {
+        type: Number
+    },
+    make: {
+        type: String
+    },
+    model: {
+        type: String
+    },
     description: {
         type: String
     },
