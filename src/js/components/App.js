@@ -1,7 +1,5 @@
 import React from 'react'
 import Header from './parts/Header'
-import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import CarEntries from './parts/CarEntries'
 
 
@@ -14,12 +12,12 @@ class CarApp extends React.Component {
 
     }
 
-
     render() {
         return(
-            <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <main>
                 <Header/>
-            </MuiThemeProvider>
+                <CarEntries/>
+            </main>
         );
 
     };
@@ -27,4 +25,4 @@ class CarApp extends React.Component {
 }
 
 
-module.exports = CarApp;
+export default CarApp;

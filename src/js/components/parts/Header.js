@@ -1,15 +1,19 @@
 import React from 'react'
 import AppBar from 'material-ui/AppBar';
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 class Header extends React.Component {
 
     render() {
         return(
-            <AppBar title="Car Stack" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+            <MuiThemeProvider muiTheme={getMuiTheme()}>
+                <AppBar title="Car Stack" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+            </MuiThemeProvider>
         )
     }
 };
 
 
 
-module.exports = Header;
+export default Header;
