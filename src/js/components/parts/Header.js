@@ -5,7 +5,7 @@ class Header extends React.Component {
 
     render() {
         return(
-            <AppBar title="Title" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
+            <AppBar title="Car Stack" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
         )
     }
 };
