@@ -25,7 +25,9 @@ class CarEntries extends React.Component {
     render() {
         var carEntries = this.state.entries.map((entry) => {
             return (
-                <Entry title={entry.title} description={entry.description} username={entry.username}/>
+                <li>
+                    <Entry title={entry.title} description={entry.description} username={entry.username}/>
+                </li>
             )
         });
 
